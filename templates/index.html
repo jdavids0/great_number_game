@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greatttt Number Game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: lightgray;
+            min-height: 300px;
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        h1{
+            text-decoration: underline;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <!-- <p>computer's guess: {{ session ['comp_num'] }}</p> -->
+        <h1>Welcome to the Greatttt Number Game!</h1>
+        <h3>I am thinking of a number between 1 and 100!</h3>
+        <h3>Take your best shot, partner!</h3>
+        <h3>You have made {{count}} guesses!</h3>
+        <form action="/guess" method="post">
+            <div>
+                <input type="text" name="guess_num">
+                <input type="submit" value="Guess!" class="btn btn-light btn-border-dark">
+            </div>
+            <h3>{{message}}</h3>
+</body>
+</html>
+
+<!-- In the root route, save a random number between 1 and 100 and display a form for the user to guess the number
+
+Create a route that determines whether the number submitted is too high, too low, or correct. Show this status on the HTML page. -->
